@@ -24,7 +24,7 @@ lazy val scalacopts = Seq(
 lazy val mainProject = (project in file("."))
   .settings(
     name := "lmsbackend",
-    libraryDependencies ++=  zio ++ doobie ++ catsInterop ++ zioLogging ++ circe ++ pureConfig,
+    libraryDependencies ++=  zio ++ doobie ++ catsInterop ++ zioLogging ++ circe ++ pureConfig ++ logback,
     scalacOptions ++= scalacopts,
     fork:=true
   )

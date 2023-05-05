@@ -1,18 +1,15 @@
 package eozel
 
+import doobie.Transactor
 import eozel.config.AppConfig
 import eozel.module.LmsConnectionPool
-import eozel.persistence.{UserRepositoryLive, UserRoleRepositoryLive}
-import eozel.service.UserServiceLive
+import eozel.persistence.{UserRepository, UserRepositoryLive, UserRoleRepository, UserRoleRepositoryLive}
+import eozel.service.{UserService, UserServiceLive}
 import zio.blocking.Blocking
 import zio.clock.Clock
 import zio.logging.slf4j.Slf4jLogger
 import zio.logging.{LogAnnotation, Logging, log}
-import zio.{App, ExitCode, ULayer, ZEnv, ZIO}
-import doobie.Transactor
-import eozel.persistence.{UserRepository, UserRoleRepository}
-import eozel.service.UserService
-import zio.{Has, Task, ZLayer}
+import zio.{App, ExitCode, Has, Task, ULayer, ZEnv, ZIO, ZLayer}
 
 object Main extends App {
 

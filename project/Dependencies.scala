@@ -50,5 +50,9 @@ object Dependencies {
       "com.github.pureconfig" %% "pureconfig" % Versions.pureConfig
     )
 
+    val logback = Seq(
+    "ch.qos.logback" % "logback-classic" % "1.2.3"
+    )
+
   }
 }
