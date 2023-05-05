@@ -7,8 +7,8 @@ import java.time.Instant
 sealed trait Role extends EnumEntry
 
 case object Role extends Enum[Role] with CirceEnum[Role] {
-  case object Admin            extends Role
-  case object Responsible      extends Role
+  case object Admin       extends Role
+  case object Responsible extends Role
   val values = findValues
 }
 
