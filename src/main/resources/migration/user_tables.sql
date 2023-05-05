@@ -1,0 +1,18 @@
+CREATE TABLE users (
+  id BIGSERIAL PRIMARY KEY,  
+  email TEXT NOT NULL,
+  password TEXT NOT NULL,
+  phone TEXT NOT NULL,  
+  firstName TEXT NOT NULL,
+  lastName TEXT NOT NULL
+);
+
+CREATE UNIQUE INDEX ON users (email);
+
+CREATE TABLE userRole (
+  id BIGSERIAL PRIMARY KEY,
+  userId BIGINT NOT NULL,
+  role TEXT NOT NULL,
+  created TIMESTAMP NOT NULL,
+  isActive BOOLEAN NOT NULL
+);
