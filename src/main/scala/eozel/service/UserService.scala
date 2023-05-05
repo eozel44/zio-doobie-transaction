@@ -3,9 +3,8 @@ package eozel.service
 import doobie.Transactor
 import doobie.implicits._
 import eozel.config.AppConfig
-import eozel.domain.error.{AppDaoError, AppError}
-import eozel.domain.user._
-import eozel.persistence.user._
+import eozel.domain.{AppDaoError, AppError, Role, User, UserRole}
+import eozel.persistence.{UserRepository, UserRoleRepository}
 import zio._
 import zio.interop.catz._
 import zio.macros.accessible

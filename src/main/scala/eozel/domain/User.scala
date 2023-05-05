@@ -1,4 +1,4 @@
-package eozel.domain.user
+package eozel.domain
 
 case class User(
   id: Long,

@@ -1,4 +1,4 @@
-package eozel.module.persistence
+package eozel.module
 
 import com.zaxxer.hikari.HikariConfig
 import doobie.Transactor

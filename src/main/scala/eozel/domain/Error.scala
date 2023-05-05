@@ -1,4 +1,4 @@
-package eozel.domain.error
+package eozel.domain
 
 import io.circe._
 import io.circe.generic.JsonCodec

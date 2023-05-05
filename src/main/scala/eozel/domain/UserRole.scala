@@ -1,4 +1,4 @@
-package eozel.domain.user
+package eozel.domain
 
 import enumeratum._
 

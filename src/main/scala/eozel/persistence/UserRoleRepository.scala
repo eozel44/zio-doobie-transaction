@@ -1,11 +1,10 @@
-package eozel.persistence.user
+package eozel.persistence
 
 import doobie._
 import doobie.enumerated.SqlState
 import doobie.implicits._
 import doobie.implicits.legacy.instant._
-import eozel.domain.error.{AlreadyExistsError, AppDaoError, AppError}
-import eozel.domain.user._
+import eozel.domain.{AlreadyExistsError, AppDaoError, AppError, Role, UserRole}
 import zio._
 import zio.interop.catz._
 
