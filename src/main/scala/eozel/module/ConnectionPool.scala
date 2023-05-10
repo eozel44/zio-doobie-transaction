@@ -10,9 +10,9 @@ import zio.clock.Clock
 
 import java.util.Properties
 
-object LmsConnectionPool {
+object ConnectionPool {
 
-  val live: RLayer[Has[AppConfig] with Clock with Blocking, Has[Transactor[Task]]] = {
+  val layer: RLayer[Has[AppConfig] with Clock with Blocking, Has[Transactor[Task]]] = {
     ZLayer.fromManaged(
       for {
         zRuntime <- ZIO.runtime[Clock with Blocking].toManaged_

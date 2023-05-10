@@ -2,7 +2,7 @@ package eozel
 
 import doobie.Transactor
 import eozel.config.AppConfig
-import eozel.module.LmsConnectionPool
+import eozel.module.ConnectionPool
 import eozel.persistence.{UserRepository, UserRepositoryLive, UserRoleRepository, UserRoleRepositoryLive}
 import eozel.service.{UserService, UserServiceLive}
 import zio.blocking.Blocking
@@ -26,7 +26,7 @@ object Main extends App {
     //base layers
     Clock.live >+> Blocking.live >+> loggingLayer >+> AppConfig.live >+>
       //persistance layers
-      LmsConnectionPool.live >+> UserRepositoryLive.layer >+> UserRoleRepositoryLive.layer >+>
+      ConnectionPool.layer >+> UserRepositoryLive.layer >+> UserRoleRepositoryLive.layer >+>
       //service layer
       UserServiceLive.layer
 

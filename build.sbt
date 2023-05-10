@@ -23,7 +23,7 @@ lazy val scalacopts = Seq(
 
 lazy val mainProject = (project in file("."))
   .settings(
-    name := "lmsbackend",
+    name := "eozelapp",
     libraryDependencies ++=  zio ++ doobie ++ catsInterop ++ zioLogging ++ circe ++ pureConfig ++ logback,
     scalacOptions ++= scalacopts,
     fork:=true
