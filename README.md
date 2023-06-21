@@ -1,6 +1,6 @@
 # Functional Transaction Management
 
-Build your transactions in purely functional way. 
+Build transactions in purely functional way. 
 With zio, doobie & postgres.
 
 ### dependencies:
