@@ -3,7 +3,7 @@
 Build your transactions in purely functional way. 
 With zio, doobie & postgres.
 
-### Dependencies:
+### dependencies:
 
 ```scala
 val zio         = "1.0.11"
@@ -17,7 +17,7 @@ val circeEnum   = "1.7.0"
 val pureConfig  = "0.17.0"   
 ```
 
-### Code:
+### code:
 
 ```scala
 override def signupUser(user: User, role: Role): IO[AppError, User] = {
