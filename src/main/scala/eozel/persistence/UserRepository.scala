@@ -69,21 +69,9 @@ object UserRepositorySQL {
                     u.password,
                     u.phone,
                     u.firstName,
-                    u.lastName,
-                    u.gender,
-                    u.identityNumber,
-                    u.displayName,
-                    u.dateOfBirth,
-                    u.countryId,
-                    u.cityId,
-                    u.created,
-                    u.isActive,
-                    s.state userState,
-                    m.mark
+                    u.lastName
                     FROM users u
-                    INNER JOIN userState s ON s.userid = u.id
-                    INNER JOIN userMark m ON m.userid = u.id
-                    WHERE u.isActive = ${true} AND u.id = ${id}"""
+                    WHERE u.id = ${id}"""
       .query[User]
       .option
 

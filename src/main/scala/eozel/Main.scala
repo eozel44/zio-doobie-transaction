@@ -2,6 +2,7 @@ package eozel
 
 import doobie.Transactor
 import eozel.config.AppConfig
+import eozel.domain._
 import eozel.module.ConnectionPool
 import eozel.persistence.{UserRepository, UserRepositoryLive, UserRoleRepository, UserRoleRepositoryLive}
 import eozel.service.{UserService, UserServiceLive}
@@ -33,9 +34,10 @@ object Main extends App {
   override def run(args: List[String]): ZIO[ZEnv, Nothing, ExitCode] = {
 
     val program = for {
-      _ <- log.info(s"starting")
-      //us <- UserServiceLive.signupUser(new User(0L, "a", "b", "c", "d", "e"), Role.Admin)
-      _ <- log.info(s"done")
+      _ <- log.info(s"transaction start")
+      _ <- UserService.signupUser(new User(0L, "eozel44@gmail.com",
+        "eren", "+90", "eren", "ozel"), Role.Admin)
+      _ <- log.info(s" transaction end")
     } yield ()
 
     program
