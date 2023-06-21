@@ -38,6 +38,7 @@ override def signupUser(user: User, role: Role): IO[AppError, User] = {
 ### run:
 
 execute scripts in resources/migration
+
 sbt run
 
 
