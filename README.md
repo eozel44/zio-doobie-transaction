@@ -37,8 +37,8 @@ override def signupUser(user: User, role: Role): IO[AppError, User] = {
 ```
 ### run:
 
-1- execute scripts in resources/migration
-2- sbt run
+execute scripts in resources/migration
+sbt run
 
 
 ### keywords:
